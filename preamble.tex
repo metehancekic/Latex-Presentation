@@ -1,0 +1,272 @@
+%!TEX root = main.tex
+
+\documentclass[hyperref={unicode=true},aspectratio=1610]{beamer}
+\usetheme{Madrid}
+\beamertemplatenavigationsymbolsempty
+
+\setbeamersize{text margin left=0.6in,text margin right=0.6in} 
+\usepackage{caption}
+\captionsetup{labelformat=empty}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[super]{nth}
+\usepackage{mathtools}
+\usefonttheme[onlymath]{serif}
+\usepackage{bm}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{booktabs} % To thicken table lines
+\usepackage{pdfcomment}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+% \usepackage{beamerthemeshadow}
+\setbeamertemplate{navigation symbols}{}
+\usetheme{Madrid}
+\definecolor{LightCyan}{rgb}{0.7,1,1}
+\definecolor{LightGrey}{rgb}{0.95,0.95,0.95}
+% \definecolor{DarkBlue}{rgb}{0.1,0.1,0.7}
+\definecolor{Yellow}{rgb}{1,1,0.6}
+% \definecolor{DarkRed}{rgb}{0.7,0.1,0.1}
+% \definecolor{DarkRed}{rgb}{0.51,0.36,0}
+\definecolor{DarkRed}{rgb}{0.56,0.44,.12}
+\definecolor{LightRed}{rgb}{0.9,0.5,0.5}
+\definecolor{DarkGreen}{rgb}{0,0.5,0}
+% \definecolor{DarkBlue}{rgb}{.38, 0, .55}
+\definecolor{DarkBlue}{rgb}{.13, 0.27, .55}
+\usecolortheme[named=DarkBlue]{structure}
+
+
+% \setbeamertemplate{title page}[default][colsep=-4bp,rounded=true]
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}[frame number]{}
+\setbeamercovered{transparent}
+\setbeamertemplate{itemize item}[triangle]
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{itemize subsubitem}{--}
+\setbeamertemplate{enumerate items}[default]
+\usefonttheme[onlymath]{serif}
+\setbeamercolor{item}{fg=DarkBlue} % color of bullets
+\setbeamercolor{subitem}{fg=DarkBlue}
+\setbeamercovered{invisible}
+
+\usepackage{cite}
+% \usepackage{amsmath,amssymb,amsfonts}
+% \usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage[compatibility=false]{caption}
+\usepackage{subcaption}
+\usepackage{ifthen}
+\usepackage{bbm}
+\usepackage{amssymb}
+\usepackage{algorithmicx}
+% \usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+% \usepackage{enumitem}
+\usepackage[electronic]{ifsym}
+% \usepackage{caption}
+\usepackage{physics}
+
+\captionsetup[figure]{labelformat=empty}
+
+\usepackage{makecell,pbox,ragged2e,hhline}
+% \usepackage[table, x11names, svgnames]{xcolor}
+
+\usepackage{color,diagbox,tabularx,multirow}
+\usepackage{multicol}
+
+\usepackage{colortbl}
+
+\usepackage{tikz}
+\usetikzlibrary{fit, shapes.geometric, shapes.misc, arrows.meta, positioning, decorations.markings, matrix, calc, decorations.pathreplacing}
+\tikzset{>={Latex[width=1mm,length=1.2mm]}}
+\usepackage{smartdiagram}
+\usesmartdiagramlibrary{additions}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest, ticks=none}
+\usepackage{varwidth}
+\tikzset{every picture/.style={/utils/exec={\fontfamily{lmss}}}}
+\tikzset{circ/.style = {circle, draw=black!100, fill=blue!25, thin, minimum height=3mm, minimum width=3mm, 
+  inner sep=1.2mm},
+  rect2/.style = {rectangle, draw=black!100, fill=cyan!18, thin, minimum height=7.5mm, minimum width=11mm, 
+  inner sep=1.5mm},
+  circ2/.style = {circle, draw=black!100, fill=red!35, thin, minimum size=7mm},
+  outer/.style = {rounded corners=0.07cm, draw=DarkBlue, inner sep = 0mm, minimum height=6mm, ultra thick},
+  outer2/.style = {rounded corners=0.2cm, draw=black!100, dashed, inner sep = 3mm},
+  encode/.style = {trapezium, draw=black!100, fill=green!20, trapezium angle=75, shape border rotate=90, shift = {(-0.75, 0)}, minimum width=5mm, minimum height=11mm, align=center},
+  decode/.style = {trapezium, draw=black!100, fill=green!20, trapezium angle=-75, shape border rotate=90, minimum width=5mm, minimum height=11mm, align=center},
+  rect3/.style = {rectangle, draw=black!100, fill=cyan!1, thin, minimum height=7.5mm, minimum width=11mm, 
+  inner sep=1.5mm},
+  bluelines/.style={smooth, very thick, blue!40!gray},
+  pre/.style={draw, rectangle, minimum height=6mm, minimum width=15mm, align=center,fill=gray!20, inner sep = 0mm},
+  add/.style={draw, rectangle, minimum height=6mm, minimum width=22.5mm, align=center,fill=DarkBlue!20, inner sep = 0mm},
+  msg/.style={draw, rectangle, minimum height=6mm, minimum width=35mm, align=center,fill=gray!20, inner sep = 0mm},
+  par/.style={draw, rectangle, minimum height=6mm, minimum width=22.5mm, align=center,fill=gray!20, inner sep = 0mm},
+  long/.style={short, text width=1.5cm},
+  brace/.style={decorate, decoration={brace,amplitude=4pt,mirror,raise=1pt}},
+  }
+
+\usepackage{steinmetz}
+\usepackage{xpatch}
+\xpatchcmd{\phase}{#2}{\hspace{0.8pt}\vphantom{\scalebox{0.8}{\tiny{,}}}#2\hspace{1.4pt}}{}{}
+\newcommand{\implyarrow}{\mathrel{\text{\raisebox{1.3ex}{\rotatebox[origin=c]{90}{\mathhexbox37F}}}}}
+\makeatletter
+\newdimen\@widthOfTo%
+\newdimen\@widthOfImplies%
+\settowidth{\@widthOfTo}{$\to$}%
+\settowidth{\@widthOfImplies}{$\Longrightarrow$}%
+\pgfmathsetmacro{\@scaleFactorImplies}{\@widthOfTo/\@widthOfImplies}%
+\newcommand*{\ScaledImplies}{\mathrel{\raisebox{0.3ex}{\scalebox{\@scaleFactorImplies}{\ensuremath{\Longrightarrow}}}}}%
+\makeatother
+
+
+\newcolumntype{x}[1]{>{\centering\arraybackslash}p{#1}}
+
+\newcommand{\greyrule}{\arrayrulecolor{black!70}\midrule\arrayrulecolor{black}}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{% <---- BEWARE
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\newcommand<>{\uncovergraphics}[2][{}]{
+    % Taken from: <https://tex.stackexchange.com/a/354033/95423>
+    \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (B) at (4,0)
+        {\includegraphics[#1]{#2}};
+    \alt#3{}{%
+        \fill [draw=none, fill=white, fill opacity=0.9] (B.north west) -- (B.north east) -- (B.south east) -- (B.south west) -- (B.north west) -- cycle;
+    }
+    \end{tikzpicture}
+}
+
+% Introduce a new counter for counting the nodes needed for circling
+\newcounter{nodecount}
+% Command for making a new node and naming it according to the nodecount counter
+\newcommand\tabnode[1]{\addtocounter{nodecount}{1} \tikz \node (\arabic{nodecount}) {#1};}
+
+
+\DeclareMathOperator{\modrelu}{ModReLU}
+\DeclareMathOperator{\crelu}{CReLU}
+\DeclareMathOperator{\relu}{ReLU}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+% \DeclareMathOperator{\modrelu}{\text{ModReLU}}
+% \DeclareMathOperator{\crelu}{\text{CReLU}}
+% \DeclareMathOperator{\re}{\text{Re}}
+% \DeclareMathOperator{\im}{\text{Im}}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\supp}{supp}
+\DeclareMathOperator*{\sign}{sgn}
+\DeclareMathOperator*{\vari}{var}
+\DeclareMathOperator*{\cov}{cov}
+\DeclareMathOperator*{\E}{\mathbb{E}}
+\DeclareMathOperator*{\prob}{Pr}
+\DeclareMathOperator*{\proj}{\mathcal{P}_K}
+\DeclareMathOperator*{\support}{\mathcal{S}_K}
+\DeclareMathOperator*{\sparse}{\mathcal{H}_K}
+\DeclareMathOperator{\bigo}{{\mathcal{O}}}
+\DeclareMathOperator{\littleo}{{\scriptstyle\mathcal{O}}}
+\DeclareMathOperator{\sublittleo}{{\scriptscriptstyle\mathcal{O}}}
+\DeclareMathOperator*{\polylog}{polylog}
+\let\originalleft\left
+\let\originalright\right
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+\renewcommand{\right}{\aftergroup\egroup\originalright}
+
+\newcommand{\bw}{{\bm w}}
+\newcommand{\bx}{{\bm x}}
+\newcommand{\be}{{\bm e}}
+\newcommand{\by}{{\bm y}}
+\newcommand{\ba}{{\bm a}}
+\newcommand{\bs}{{\bm s}}
+\newcommand{\bW}{{\bm W}}
+\newcommand{\bz}{{\bm z}}
+\newcommand{\bb}{{\bm b}}
+\newcommand{\bl}{{\bm l}}
+\newcommand{\bp}{{\bm p}}
+\newcommand{\bpsi}{{\bm \psi}}
+\newcommand{\bweq}{{\bw_{\mathrm{eq}}}}
+\newcommand{\bweqi}{{\bw_{\mathrm{eq}}^{\left\{i\right\}}}}
+\newcommand{\bweqt}{{\bw_{\mathrm{eq}}^{\left\{t\right\}}}}
+\newcommand{\bweqj}{{\bw_{\mathrm{eq}}^{\left\{j\right\}}}}
+\newcommand{\bweqm}{{\bw_{\mathrm{eq}}^{\left\{m\right\}}}}
+\newcommand{\bweqk}{{\bw_{\mathrm{eq}}^{\left\{k\right\}}}}
+\newcommand{\bweql}{{\bw_{\mathrm{eq}}^{\left\{l\right\}}}}
+\newcommand{\bweqistar}{{\bw_{\mathrm{eq}}^{\left\{{i^*}\right\}}}}
+\newcommand{\beq}{b_{\mathrm{eq}}}
+\newcommand{\beqi}{{b_{\mathrm{eq}}^{\left\{i\right\}}}}
+\newcommand{\beqt}{{b_{\mathrm{eq}}^{\left\{t\right\}}}}
+\newcommand{\beql}{{b_{\mathrm{eq}}^{\left\{l\right\}}}}
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\newcommand{\abar}{{\overbar{a}}}
+\newcommand{\sbar}{{\overbar{s}}}
+\newcommand{\ybar}{{\overbar{y}}}
+\newcommand{\xbar}{{\overbar{x}}}
+\newcommand{\bxbar}{\bm{{\overbar{x}}}}
+\newcommand{\bebar}{\bm{\overbar{e}}}
+\newcommand{\bsbar}{{\bm{\overbar{s}}}}
+\newcommand{\bweqbar}{{\overbar{\bw}_{\mathrm{eq}}}}
+\newcommand{\beqbar}{{\overbar{b}_{\mathrm{eq}}}}
+
+\newcommand{\pdfnote}[1]{\marginnote{\pdfcomment[icon=note]{#1}}}
+
+\newcommand{\xhat}{\hat{x}}
+\newcommand{\bxhat}{\bm{\hat{x}}}
+\newcommand{\behat}{\bm{\hat{e}}}
+\newcommand{\bhat}{{\hat{b}}}
+\newcommand{\bwhat}{{\bm{\hat{w}}}}
+
+\newcommand{\bwtilde}{{\bm{\tilde{w}}}}
+
+\newcommand{\subN}{{\mathchoice{}{}{\scriptscriptstyle}{}N}}
+\newcommand{\subM}{{\mathchoice{}{}{\scriptscriptstyle}{}M}}
+\newcommand{\subzero}{{\mathchoice{}{}{\scriptscriptstyle}{}0}}
+
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+  #1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+
+
+\usepackage{listings}
+\lstdefinestyle{python}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=shadowbox,
+  rulesepcolor=\color{gray},
+  xleftmargin=\parindent,
+  language=Python,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{deepblue},
+  moredelim=**[s][\color{blue}]{'''}{'''},
+  commentstyle=\itshape\color{magenta},
+  identifierstyle=\color{black},
+  stringstyle=\color{red}
+}
+\lstdefinestyle{output}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  basicstyle=\footnotesize\ttfamily,
+  xleftmargin=\parindent
+}
+
+\urlstyle{rm}
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}

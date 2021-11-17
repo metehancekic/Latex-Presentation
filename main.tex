@@ -1,0 +1,76 @@
+
+\input{preamble}
+
+\begin{document}
+
+\title{Latex Template}
+\author[Metehan Cekic]{Metehan Cekic}
+\institute{\normalsize University of California, Santa Barbara}
+\centering
+\date[]{16 Nov 2021}
+
+\begin{frame}
+  \maketitle
+
+  \begin{table}\centering
+  \begin{tabular}{rl}
+  Someone: & Random one \\
+  Another one: & second \\
+               & third \\
+               & fourth
+  \end{tabular}
+  \end{table}
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Robustness across days}
+  \begin{itemize}[<+->]
+    \item {\color{DarkRed} Bla?}: Bla bla \vspace{5pt}
+    \begin{itemize}
+      \item<.-> Bla... \vspace{5pt}
+      \item<.-> Bl.
+    \end{itemize}
+  \end{itemize}
+  \begin{itemize}[<+->]
+    \item Bla bla. \vspace{5pt}
+    \begin{itemize}[<+->]
+      \item<.-> Bla bla
+      \vspace{5pt}
+    \end{itemize} 
+    \item {\color{DarkRed} Blabla}: Bla bla.
+    \begin{itemize}[<+->]
+      \item<.-> It is bla bla
+       % \vspace{5pt}
+    \end{itemize} 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Experiments}
+  \begin{itemize}
+    \item Bla bla $\rightarrow$ another bla bla.
+    \begin{itemize}
+      \item Bla details.
+    \end{itemize}
+    \item However bla bla.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \begin{columns}
+  \begin{column}{0.75\textwidth}
+  \begin{center}
+  \font\endfont = cmss10 at 15.40mm
+  \color{DarkBlue}
+  \endfont 
+  \baselineskip 20.0mm
+  Thank you
+  \end{center}    
+  \end{column}
+  \end{columns}
+\end{frame} 
+
+
+\end{document}
+
