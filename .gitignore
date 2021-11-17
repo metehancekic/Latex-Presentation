@@ -8,3 +8,5 @@
 *.upa
 *.fdb_latexmk
 *.aux
+
+*.DS_store
